@@ -1,0 +1,52 @@
+<single-spa-router>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <!-- Example layouts you might find helpful:
+
+  <nav>
+    <application name="@org/navbar"></application>
+  </nav>
+  <route path="settings">
+    <application name="@org/settings"></application>
+  </route>
+
+
+  <redirect from="/" to="/vivienda"></redirect>
+ <route path="vivienda">
+        <route path="simulador">
+              </route>  
+
+        <application name="mf-simulator"></application> 
+      </route>
+
+  -->
+
+  <redirect from="/" to="/vivienda"></redirect>
+
+
+  <main>
+   
+    <route path="vivienda">
+
+
+  
+      <application name="mf-headers"></application>
+      <route default>
+        <application name="mf-landing"></application> 
+      </route>
+      <route path="simulador">
+        <application name="mf-simulator"></application> 
+      </route>
+      <route path="documento">
+        <application name="mf-basic-data"></application> 
+      </route>
+        <application name="mf-footer"></application>
+    </route>  
+
+  </main>
+</single-spa-router>
